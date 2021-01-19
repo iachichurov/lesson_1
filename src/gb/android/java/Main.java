@@ -80,7 +80,8 @@ public class Main {
 */
 
     public static void whichYear(int year) {
-        if (year <= 1582) System.out.println("Может високосный, а может и нет. Папа Григорий XIII знал");
+        if (year < 1582) System.out.println("Может високосный, а может и нет. Папа Григорий XIII знал");
+        else if (year == 1582) System.out.println("Начало григорианского календаря, не високосный");
         else if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) System.out.println("Високосный");
         else System.out.println("Не високосный");
   }
